@@ -196,8 +196,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📞 Support
 
 - **Issues**: [GitHub Issues](https://github.com/Mitash0404/Exotic-Option-Monte-Carlo-Pricer/issues)
-- **Email**: mitash.shah@example.com
+- **Email**: mitashshah@gmail.com
 
 ---
-
-**Built with ❤️ for quantitative finance**
