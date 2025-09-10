@@ -56,48 +56,6 @@ exotic_option_pricer/
 └── demo.py                # Main demo script
 ```
 
-## 🚀 Quick Start
-
-### Installation
-
-1. **Clone the repository:**
-```bash
-git clone https://github.com/Mitash0404/Exotic-Option-Monte-Carlo-Pricer.git
-cd exotic_option_monte_carlo_pricer
-```
-
-2. **Install dependencies:**
-```bash
-pip install -r requirements.txt
-```
-
-3. **Run the demo:**
-```bash
-python demo.py
-```
-
-### Basic Usage
-
-**Price European Options:**
-```python
-from src.models.heston_model import HestonModel
-from src.pricing.monte_carlo_engine import MonteCarloEngine
-
-# Initialize model
-model = HestonModel(v0=0.04, kappa=2.0, theta=0.04, rho=-0.7, sigma=0.5)
-engine = MonteCarloEngine(model, n_paths=100000)
-
-# Price European call
-price = engine.price_european_call(spot=100, strike=100, maturity=1.0)
-```
-
-**Calibrate with Genetic Algorithm:**
-```python
-from src.calibration.genetic_algorithm import GeneticAlgorithmCalibrator
-
-calibrator = GeneticAlgorithmCalibrator()
-calibrated_params = calibrator.calibrate(market_prices, model)
-```
 
 ## 📈 Performance Results
 
@@ -119,85 +77,21 @@ calibrated_params = calibrator.calibrate(market_prices, model)
 - **Stress Test Scenarios**: 250k delta-hedged scenarios
 - **VaR Accuracy**: ±2% vs historical backtesting
 
-## ⚙️ Configuration
 
-### Model Parameters
-```python
-# Heston Model
-heston_params = {
-    'v0': 0.04,      # Initial variance
-    'kappa': 2.0,    # Mean reversion speed
-    'theta': 0.04,   # Long-term variance
-    'rho': -0.7,     # Correlation
-    'sigma': 0.5     # Volatility of volatility
-}
 
-# SABR Model
-sabr_params = {
-    'alpha': 0.2,    # Initial volatility
-    'beta': 0.5,     # CEV parameter
-    'rho': -0.1,     # Correlation
-    'nu': 0.5        # Volatility of volatility
-}
-```
 
-### Monte Carlo Settings
-```python
-mc_settings = {
-    'n_paths': 100000,        # Number of simulation paths
-    'n_steps': 252,           # Time steps per year
-    'use_antithetic': True,   # Antithetic variates
-    'use_control_variates': True  # Control variates
-}
-```
 
-## 🔧 Development
 
-### Running Tests
-```bash
-# Run all tests
-python -m pytest tests/ -v
+## 🛠️ Technology Stack
 
-# Run with coverage
-python -m pytest tests/ --cov=src --cov-report=html
-```
-
-### Code Quality
-```bash
-# Format code
-black src/ tests/
-
-# Lint code
-flake8 src/ tests/
-```
-
-## 📚 Documentation
-
-- **[Performance Report](docs/performance_report.md)**: Detailed accuracy and performance analysis
-- **[Model Implementation](docs/model_implementation.md)**: Technical implementation details
-- **[API Reference](docs/api_reference.md)**: Code documentation
-
-## ⚠️ Risk Disclaimer
-
-**This software is for educational and research purposes only. Option pricing involves substantial risk and is not suitable for all investors. Past performance does not guarantee future results. Always validate models thoroughly before using in production.**
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+- **Languages**: Python 3.8+
+- **Quantitative Finance**: QuantLib, NumPy, SciPy
+- **Monte Carlo Methods**: Custom implementation with variance reduction
+- **Optimization**: Genetic algorithms, Nelder-Mead optimization
+- **Risk Management**: VaR, CVaR, stress testing frameworks
+- **Testing**: Pytest with comprehensive coverage
+- **Performance**: Optimized numerical computations
 
 ## 📝 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 📞 Support
-
-- **Issues**: [GitHub Issues](https://github.com/Mitash0404/Exotic-Option-Monte-Carlo-Pricer/issues)
-- **Email**: mitash.shah@example.com
-
----
-
-**Built with ❤️ for quantitative finance**
