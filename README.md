@@ -95,3 +95,13 @@ exotic_option_pricer/
 ## 📝 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+<<<<<<< HEAD
+=======
+
+## 📞 Support
+
+- **Issues**: [GitHub Issues](https://github.com/Mitash0404/Exotic-Option-Monte-Carlo-Pricer/issues)
+- **Email**: mitashshah@gmail.com
+
+---
+>>>>>>> 18e99603bbf0a9b554a0e746d80d5c8e265dd3c1
